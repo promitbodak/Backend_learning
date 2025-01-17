@@ -2,10 +2,14 @@
   "name": "backend_learning",
   "version": "1.0.0",
   "description": "This is a Learning series on backend with javascript",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon src/index.js"
   },
   "author": "Promit Bodak",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
 }
