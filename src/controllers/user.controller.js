@@ -4,7 +4,7 @@ import {User} from "../models/user.model.js"
 import {uploadOnCloudinary} from "../utils/cloudinary.js"
 import {ApiResponse} from "../utils/ApiResponse.js"
 
-
+//An auxiliary function to generate tokens used by both login and logout controller
 const generateAccessAndRefreshTokens = async (userId) => {
     try {
         const user = await User.findById(userId)
@@ -23,6 +23,8 @@ const generateAccessAndRefreshTokens = async (userId) => {
         throw new ApiError(500, "something went wrong while generating refresh or access token")
     }
 }
+
+
 
 
 const registerUser = asyncHandler(async (req, res) => {
